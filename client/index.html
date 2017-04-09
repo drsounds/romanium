@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Cosmosfulness</title>
+    <base href="https://cosmosfulness-drsounds.c9users.io/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vendor/aframe.js"></script>
+    <script src="js/vendor/aframe-animation-component.js"></script>
+    <script src="js/vendor/anime.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <audio src="mp3/rf.m4a" autoplay></audio>
+  <audio src="mp3/ontology.mp3" autoplay></audio>
+    <a-scene inspector="url: js/vendor/aframe-inspector.js">
+      <a-assets>
+        <img id="sky" src="/img/stars.png">
+        <img id="angel" transparent="true" src="/img/angel.svg">
+        <img id="flag_slide" transparent="true" src="/img/flag_slide.png">
+        <img id="sleep_with_mother" transparent="true" src="/img/sleep_with_mother.png">
+        <img id="sleep_in_own_bed" transparent="true" src="/img/sleep_in_own_bed.png">
+        <img id="spaceship" transparent="true" src="/img/spaceship.png">
+        <img id="orphanage_office" transparent="true" src="/img/orphanage_office.png">
+      </a-assets>
+    
+      <a-sky id="space" rotation="-0 -90 0" src="#sky" opacity="1"></a-sky>
+      <a-sky id="scene" rotation="-0 -90 0" src="#orphanage_office" opacity="0"></a-sky>
+      <a-camera position="0 0 0"></a-camera>
+      <a-plane
+        position="0 1.5 -1" 
+        src="#angel"
+        transparent="true"
+        animation="property: position; dir: alternate; dur: 500; easing: easeInSine; loop: true; to: 0 1.6 -1"
+        >
+      </a-plane>
+      <!-- Using the asset management system. <--></-->
+    </a-scene>
+  </body>
+</html>
