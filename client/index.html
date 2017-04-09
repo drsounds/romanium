@@ -4,12 +4,14 @@
     <title>Cosmosfulness</title>
     <base href="https://cosmosfulness-drsounds.c9users.io/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/vendor/sprintf.js"></script>
+    <script src="js/vendor/i18n.js"></script>
     <script src="js/vendor/aframe.js"></script>
     <script src="js/vendor/aframe-animation-component.js"></script>
     <script src="js/vendor/anime.min.js"></script>
     <script src="js/main.js"></script>
   </head>
-  <audio src="mp3/rf.m4a" autoplay></audio>
+  
   <audio src="mp3/ontology.mp3" autoplay></audio>
     <a-scene inspector="url: js/vendor/aframe-inspector.js">
       <a-assets>
@@ -21,8 +23,8 @@
         <img id="spaceship" transparent="true" src="/img/spaceship.png">
         <img id="orphanage_office" transparent="true" src="/img/orphanage_office.png">
       </a-assets>
-    
-      <a-sky id="space" rotation="-0 -90 0" src="#sky" opacity="1"></a-sky>
+      <a-text position="0 2 -1" value="A"></a-text>
+      <a-sky id="space"  rotation="-0 -90 0" src="#sky" opacity="1"></a-sky>
       <a-sky id="scene" rotation="-0 -90 0" src="#orphanage_office" opacity="0"></a-sky>
       <a-camera position="0 0 0"></a-camera>
       <a-plane
