@@ -12,25 +12,32 @@
     <script src="js/main.js"></script>
   </head>
   
-  <audio src="mp3/ontology.mp3" autoplay></audio>
+  <!-- <audio src="mp3/brokensigil.mp3" autoplay></audio> -->
     <a-scene inspector="url: js/vendor/aframe-inspector.js">
       <a-assets>
         <img id="sky" src="/img/stars.png">
         <img id="angel" transparent="true" src="/img/angel.svg">
         <img id="flag_slide" transparent="true" src="/img/flag_slide.png">
+        <img id="sphere0" transparent="true" src="/img/sphere0.png">
+        <img id="sphere1" transparent="true" src="/img/sphere1.png">
+        <img id="sphere2" transparent="true" src="/img/sphere2.png">
+        <img id="sphere3" transparent="true" src="/img/sphere3.png">
         <img id="sleep_with_mother" transparent="true" src="/img/sleep_with_mother.png">
         <img id="sleep_in_own_bed" transparent="true" src="/img/sleep_in_own_bed.png">
         <img id="spaceship" transparent="true" src="/img/spaceship.png">
         <img id="orphanage_office" transparent="true" src="/img/orphanage_office.png">
       </a-assets>
-      <a-text position="-1 2 -1" value="A"></a-text>
-      <a-sky id="space"  rotation="-0 -90 0" src="#sky" opacity="1"></a-sky>
-      <a-sky id="scene" rotation="-0 -90 0" src="#orphanage_office" opacity="0"></a-sky>
+      <a-text position="-1 2 -1" width="2"></a-text>
+      <a-sky id="space"  radius="54" animation="property: rotation; dir: alternate; dur: 5000; easing: linear; loop: true; to: 0 90" rotation="-0 -90 0" src="#sky" opacity="1"></a-sky>
+      <a-sky id="sphere" radius="25"  rotation="-0 0 0" opacity="0.5" src="#sphere"></a-sky>
+      <a-sky id="scene" radius="58"  rotation="-0 -90 0" src="#orphanage_office" opacity="0"></a-sky>
       <a-camera position="0 0 0"></a-camera>
       <a-plane
         position="0 1.5 -1" 
         src="#angel"
+        id="angel"
         transparent="true"
+        visible="false"
         animation="property: position; dir: alternate; dur: 500; easing: easeInSine; loop: true; to: 0 1.6 -1"
         >
       </a-plane>
